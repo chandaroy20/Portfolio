@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "del-cli && ng build && node ./bin/www",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,8 +20,15 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
     "core-js": "^2.5.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "jade": "~1.11.0",
+    "morgan": "^1.9.1",
     "rxjs": "~6.2.0",
+    "serve-favicon": "~2.4.5",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -33,6 +40,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.3.0",
+    "del-cli": "^1.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
