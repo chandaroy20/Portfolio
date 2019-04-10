@@ -1,0 +1,14 @@
+<div class="row" style="padding-top:1rem">
+  <div class="col-sm-3">
+    <ul class="list-group">
+      <li class="list-group-item" [ngClass]="{'active': selectedItem == topic}" (click)="listClick($event, topic)" *ngFor="let topic of topics">{{topic}}</li>
+    </ul>
+  </div>
+  <div class="col-sm-9">
+    <h3>{{selectedItem}} Interview Questions</h3><hr>
+    <div class="questions" *ngFor="let item of questions;let i=index">
+      <h6><span>{{i+1}} .</span> {{item.question}}</h6>
+      <p>{{item.answer}}</p>
+    </div>
+  </div>
+</div>
