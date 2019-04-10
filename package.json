@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": " node ./bin/www",
+    "start": "del-cli dist && ng build && node ./bin/www",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -28,7 +28,8 @@
     "jade": "~1.11.0",
     "morgan": "^1.9.1",
     "rxjs": "~6.2.0",
-    "serve-favicon": "~2.4.5",
+    "serve-favicon": "^2.4.5",
+    "update-notifier": "^2.5.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
